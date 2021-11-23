@@ -27,6 +27,8 @@ jobs:
           node-version: 14.x
       - name: Install dependencies
         run: yarn install
+      - name: Install ESLint
+        run: sudo yarn install -g eslint
       - name: Run ESLint
         run: eslint . --ext .js,.jsx,.ts,.tsx
       - name: Test
